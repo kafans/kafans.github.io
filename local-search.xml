@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>hello-agent第四章</title>
+    <link href="/2026/07/14/hello-agent%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
+    <url>/2026/07/14/hello-agent%E7%AC%AC%E5%9B%9B%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[<p>额。。。怎么突然到第四章了呢？明明之前还在搞第一章？</p><p>实际上是我搞错了。。。开始写这篇blog的时候才发现。。。但是做都做了，那就随便写点，下次再把第二章和第三章的内容给学了</p><p>第四章非常倾向于实战方面，使用代码教我们几个经典的智能体范式：ReAct、Plan-and-Solve、Reflection这三个，我目前还只做了前两个。</p><p>ReAct的精髓在于反复的思考、行动与观察，引用教材的话：<br>    智能体不断重复这个 <strong>Thought -&gt; Action -&gt; Observation</strong> 的循环，将新的观察结果追加到历史记录中，形成一个不断增长的上下文，直到它在<code>Thought</code>中认为已经找到了最终答案，然后输出结果。</p><p>Plan-and-Solve的精髓在于将任务的解决流程分为了规划与执行两个阶段，还是引用教程：<br>    1. <strong>规划阶段 (Planning Phase)<strong>： 首先，智能体会接收用户的完整问题。它的第一个任务不是直接去解决问题或调用工具，而是</strong>将问题分解，并制定出一个清晰、分步骤的行动计划</strong>。这个计划本身就是一次大语言模型的调用产物。<br>    2. <strong>执行阶段 (Solving Phase)<strong>： 在获得完整的计划后，智能体进入执行阶段。它会</strong>严格按照计划中的步骤，逐一执行</strong>。每一步的执行都可能是一次独立的 LLM 调用，或者是对上一步结果的加工处理，直到计划中的所有步骤都完成，最终得出答案。</p><p>Reflection还没仔细学，等将来学了再说</p><p>就到这吧，最近开始玩骑砍2了，目前感觉还挺有意思的，感觉能玩很长一段时间:)</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hello-agents</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>hello-agents第一章习题</title>
+    <link href="/2026/07/09/hello-agents%E7%AC%AC%E4%B8%80%E7%AB%A0%E4%B9%A0%E9%A2%98/"/>
+    <url>/2026/07/09/hello-agents%E7%AC%AC%E4%B8%80%E7%AB%A0%E4%B9%A0%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p>今天完成了第一章的习题，回顾一下有哪些内容吧。</p><p>令我印象较为深刻的有一个关于PEAS模型的题目，借助PEAS模型可以帮助我详细的描述智能体的任务环境，也就是从性能指标、环境、执行器、和传感器这四个方向来分析。</p><p>接下来就是Workflow和Agent的优缺点之别，用我自己的话简单解释，两者的优劣就在于各自的可控性与灵活性的差别。</p><p>还有后面一道如何添加agent功能的题目颇有意思，帮我重新思考先前的简易旅游agent，并且给了我一个“维护用户memory”的思路，用于长期记住用户偏好，与此同时可以增加一个拒绝计数器用于触发“反思”系统。</p><p>最后，复习一下ai幻觉的由来：</p><ol><li>语言模型的目标不是保证真实，而是生成最可能的下一段内容</li><li>训练知识有限或过时</li><li>缺乏外部验证机制</li><li>推理链可能中途出错</li><li>高复杂度任务拥有更高的不确定性</li></ol><p>今天先这样吧。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hello-agents</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>启动hello-agents的第一天</title>
+    <link href="/2026/07/07/%E5%90%AF%E5%8A%A8hello-agents%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
+    <url>/2026/07/07/%E5%90%AF%E5%8A%A8hello-agents%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/</url>
+    
+    <content type="html"><![CDATA[<p>这是第一次写自己的博客，也不太清楚要写什么，就随便写写吧…</p><p>今天学了hello-agents的第一章，初步接触了智能体，简单回顾一下主要学到了什么，不写细节了：</p><p><strong>智能体的类型：</strong> 智能体可以从三个维度分类</p><ol><li>内部决策架构</li><li>时间与反应性</li><li>知识表示</li></ol><p><strong>智能体的运行机制：</strong> 感知、思考和行动，下面这张图可以很好的说明这点<br><img src="/img/agent_flow.png"></p><p>然后还跟着教程做了一个十分简易的智能体，用于查询天气并给出建议。在这个过程中需要使用到提示工程以及工具定义，然后就可以接入大语言模型并执行行动循环了，整体还是挺有意思的。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hello-agents</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>测试贴</title>
+    <link href="/2026/07/06/%E6%B5%8B%E8%AF%95%E5%B8%96/"/>
+    <url>/2026/07/06/%E6%B5%8B%E8%AF%95%E5%B8%96/</url>
+    
+    <content type="html"><![CDATA[<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>这是一个测试</p><h2 id="二次测试"><a href="#二次测试" class="headerlink" title="二次测试"></a>二次测试</h2><p>这也是一个测试</p><pre><code class="python"># 测试能否插入代码print(&quot;Hello World!&quot;)</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>测试</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
