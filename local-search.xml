@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>hello-agents第二章与第三章</title>
+    <link href="/2026/07/17/hello-agents%E7%AC%AC%E4%BA%8C%E7%AB%A0%E4%B8%8E%E7%AC%AC%E4%B8%89%E7%AB%A0/"/>
+    <url>/2026/07/17/hello-agents%E7%AC%AC%E4%BA%8C%E7%AB%A0%E4%B8%8E%E7%AC%AC%E4%B8%89%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[<p>第二章讲的是智能体发展史，贴一张原文的图片：<br>![][&#x2F;img&#x2F;history.png]<br>仅仅是浅尝辄止，并未对此深入研究</p><p>第三章讲的是大语言模型基础，<strong>语言模型 (Language Model, LM)</strong> 是自然语言处理的核心，其根本任务是计算一个词序列（即一个句子）出现的概率。</p><p>N-gram模型：使用最大似然估计来进行概率计算</p><p>$$<br>P(w_i \mid w_{i-1}) &#x3D; \frac{\operatorname{Count}(w_{i-1}, w_i)} {\operatorname{Count}(w_{i-1})}<br>$$<br>缺陷（摘自原文）：</p><ol><li><strong>数据稀疏性 (Sparsity)</strong> ：如果一个词序列从未在语料库中出现，其概率估计就为 0，这显然是不合理的。虽然可以通过平滑 (Smoothing) 技术缓解，但无法根除。</li><li><strong>泛化能力差：</strong> 模型无法理解词与词之间的语义相似性。例如，即使模型在语料库中见过很多次 <code>agent learns</code>，它也无法将这个知识泛化到语义相似的词上。当我们计算 <code>robot learns</code> 的概率时，如果 <code>robot</code> 这个词从未出现过，或者 <code>robot learns</code> 这个组合从未出现过，模型计算出的概率也会是零。模型无法理解 <code>agent</code> 和 <code>robot</code> 在语义上的相似性。</li></ol><p>为了克服泛化问题，研究者提出的 <strong>前馈神经网络语言模型</strong> 做出了很好的尝试。其核心思想可以分为两步（原文）：</p><ol><li><strong>构建一个语义空间</strong>：创建一个高维的连续向量空间，然后将词汇表中的每个词都映射为该空间中的一个点。这个点（即向量）就被称为<strong>词嵌入 (Word Embedding)</strong> 或词向量。在这个空间里，语义上相近的词，它们对应的向量在空间中的位置也相近。例如，<code>agent</code> 和 <code>robot</code> 的向量会靠得很近，而 <code>agent</code> 和 <code>apple</code> 的向量会离得很远。</li><li><strong>学习从上下文到下一个词的映射</strong>：利用神经网络的强大拟合能力，来学习一个函数。这个函数的输入是前 n−1 个词的词向量，输出是词汇表中每个词在当前上下文后出现的概率分布。</li></ol><p>接下来为了增加记忆能力，为了打破固定窗口的限制，<strong>循环神经网络 (Recurrent Neural Network, RNN)</strong> 应运而生：</p><p>![][&#x2F;img&#x2F;RNN.png]</p><p><strong>长短时记忆网络 (Long Short-Term Memory, LSTM)</strong> 是一种特殊的RNN，引入了细胞状态与门控，懒癌犯了，先不细写了。</p><p>接下来是重头戏 <strong>Transformer架构</strong> ，它完全抛弃了循环结构，转而完全依赖 <strong>注意力 (Attention)</strong> 的机制来捕捉序列内的依赖关系，从而实现了真正意义上的并行计算，它在宏观上遵循了一个经典的 <strong>编码器-解码器 (Encoder-Decoder)</strong> 架构。<br>![][&#x2F;img&#x2F;Transformer.png]</p><p>具体怎么搭建实在是相当难写，本懒癌患者就懒得写了，而且也没学完。。。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hello-agents</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hello-agent第四章</title>
     <link href="/2026/07/14/hello-agent%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
     <url>/2026/07/14/hello-agent%E7%AC%AC%E5%9B%9B%E7%AB%A0/</url>

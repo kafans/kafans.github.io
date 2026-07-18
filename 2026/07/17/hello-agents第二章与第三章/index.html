@@ -19,22 +19,22 @@
   <meta name="author" content="kafans">
   <meta name="keywords" content="">
   
-    <meta name="description" content="额。。。怎么突然到第四章了呢？明明之前还在搞第一章？ 实际上是我搞错了。。。开始写这篇blog的时候才发现。。。但是做都做了，那就随便写点，下次再把第二章和第三章的内容给学了 第四章非常倾向于实战方面，使用代码教我们几个经典的智能体范式：ReAct、Plan-and-Solve、Reflection这三个，我目前还只做了前两个。 ReAct的精髓在于反复的思考、行动与观察，引用教材的话：    智">
+    <meta name="description" content="第二章讲的是智能体发展史，贴一张原文的图片：![][&#x2F;img&#x2F;history.png]仅仅是浅尝辄止，并未对此深入研究 第三章讲的是大语言模型基础，语言模型 (Language Model, LM) 是自然语言处理的核心，其根本任务是计算一个词序列（即一个句子）出现的概率。 N-gram模型：使用最大似然估计来进行概率计算 $$P(w_i \mid w_{i-1}) &amp;#x3D">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello-agent第四章">
-<meta property="og:url" content="http://example.com/2026/07/14/hello-agent%E7%AC%AC%E5%9B%9B%E7%AB%A0/index.html">
+<meta property="og:title" content="hello-agents第二章与第三章">
+<meta property="og:url" content="http://example.com/2026/07/17/hello-agents%E7%AC%AC%E4%BA%8C%E7%AB%A0%E4%B8%8E%E7%AC%AC%E4%B8%89%E7%AB%A0/index.html">
 <meta property="og:site_name" content="kafans的小站">
-<meta property="og:description" content="额。。。怎么突然到第四章了呢？明明之前还在搞第一章？ 实际上是我搞错了。。。开始写这篇blog的时候才发现。。。但是做都做了，那就随便写点，下次再把第二章和第三章的内容给学了 第四章非常倾向于实战方面，使用代码教我们几个经典的智能体范式：ReAct、Plan-and-Solve、Reflection这三个，我目前还只做了前两个。 ReAct的精髓在于反复的思考、行动与观察，引用教材的话：    智">
+<meta property="og:description" content="第二章讲的是智能体发展史，贴一张原文的图片：![][&#x2F;img&#x2F;history.png]仅仅是浅尝辄止，并未对此深入研究 第三章讲的是大语言模型基础，语言模型 (Language Model, LM) 是自然语言处理的核心，其根本任务是计算一个词序列（即一个句子）出现的概率。 N-gram模型：使用最大似然估计来进行概率计算 $$P(w_i \mid w_{i-1}) &amp;#x3D">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-07-14T10:44:00.000Z">
-<meta property="article:modified_time" content="2026-07-14T10:55:31.752Z">
+<meta property="article:published_time" content="2026-07-17T09:57:00.000Z">
+<meta property="article:modified_time" content="2026-07-18T10:46:23.026Z">
 <meta property="article:author" content="kafans">
 <meta property="article:tag" content="hello-agents">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>hello-agent第四章 - kafans的小站</title>
+  <title>hello-agents第二章与第三章 - kafans的小站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -303,7 +303,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="hello-agent第四章"></span>
+            <span id="subtitle" data-typed-text="hello-agents第二章与第三章"></span>
           
         </div>
 
@@ -314,8 +314,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-07-14 18:44" pubdate>
-          2026年7月14日 晚上
+        <time datetime="2026-07-17 17:57" pubdate>
+          2026年7月17日 下午
         </time>
       </span>
     
@@ -326,7 +326,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          631 字
+          1.2k 字
         
       </span>
     
@@ -337,7 +337,7 @@
         
         
         
-          6 分钟
+          10 分钟
         
       </span>
     
@@ -376,18 +376,29 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">hello-agent第四章</h1>
+            <h1 id="seo-header">hello-agents第二章与第三章</h1>
             
             
               <div class="markdown-body">
                 
-                <p>额。。。怎么突然到第四章了呢？明明之前还在搞第一章？</p>
-<p>实际上是我搞错了。。。开始写这篇blog的时候才发现。。。但是做都做了，那就随便写点，下次再把第二章和第三章的内容给学了</p>
-<p>第四章非常倾向于实战方面，使用代码教我们几个经典的智能体范式：ReAct、Plan-and-Solve、Reflection这三个，我目前还只做了前两个。</p>
-<p>ReAct的精髓在于反复的思考、行动与观察，引用教材的话：<br>    智能体不断重复这个 <strong>Thought -&gt; Action -&gt; Observation</strong> 的循环，将新的观察结果追加到历史记录中，形成一个不断增长的上下文，直到它在<code>Thought</code>中认为已经找到了最终答案，然后输出结果。</p>
-<p>Plan-and-Solve的精髓在于将任务的解决流程分为了规划与执行两个阶段，还是引用教程：<br>    1. <strong>规划阶段 (Planning Phase)<strong>： 首先，智能体会接收用户的完整问题。它的第一个任务不是直接去解决问题或调用工具，而是</strong>将问题分解，并制定出一个清晰、分步骤的行动计划</strong>。这个计划本身就是一次大语言模型的调用产物。<br>    2. <strong>执行阶段 (Solving Phase)<strong>： 在获得完整的计划后，智能体进入执行阶段。它会</strong>严格按照计划中的步骤，逐一执行</strong>。每一步的执行都可能是一次独立的 LLM 调用，或者是对上一步结果的加工处理，直到计划中的所有步骤都完成，最终得出答案。</p>
-<p>Reflection还没仔细学，等将来学了再说</p>
-<p>就到这吧，最近开始玩骑砍2了，目前感觉还挺有意思的，感觉能玩很长一段时间:)</p>
+                <p>第二章讲的是智能体发展史，贴一张原文的图片：<br>![][&#x2F;img&#x2F;history.png]<br>仅仅是浅尝辄止，并未对此深入研究</p>
+<p>第三章讲的是大语言模型基础，<strong>语言模型 (Language Model, LM)</strong> 是自然语言处理的核心，其根本任务是计算一个词序列（即一个句子）出现的概率。</p>
+<p>N-gram模型：使用最大似然估计来进行概率计算</p>
+<p>$$<br>P(w_i \mid w_{i-1}) &#x3D; \frac{\operatorname{Count}(w_{i-1}, w_i)} {\operatorname{Count}(w_{i-1})}<br>$$<br>缺陷（摘自原文）：</p>
+<ol>
+<li><strong>数据稀疏性 (Sparsity)</strong> ：如果一个词序列从未在语料库中出现，其概率估计就为 0，这显然是不合理的。虽然可以通过平滑 (Smoothing) 技术缓解，但无法根除。</li>
+<li><strong>泛化能力差：</strong> 模型无法理解词与词之间的语义相似性。例如，即使模型在语料库中见过很多次 <code>agent learns</code>，它也无法将这个知识泛化到语义相似的词上。当我们计算 <code>robot learns</code> 的概率时，如果 <code>robot</code> 这个词从未出现过，或者 <code>robot learns</code> 这个组合从未出现过，模型计算出的概率也会是零。模型无法理解 <code>agent</code> 和 <code>robot</code> 在语义上的相似性。</li>
+</ol>
+<p>为了克服泛化问题，研究者提出的 <strong>前馈神经网络语言模型</strong> 做出了很好的尝试。其核心思想可以分为两步（原文）：</p>
+<ol>
+<li><strong>构建一个语义空间</strong>：创建一个高维的连续向量空间，然后将词汇表中的每个词都映射为该空间中的一个点。这个点（即向量）就被称为<strong>词嵌入 (Word Embedding)</strong> 或词向量。在这个空间里，语义上相近的词，它们对应的向量在空间中的位置也相近。例如，<code>agent</code> 和 <code>robot</code> 的向量会靠得很近，而 <code>agent</code> 和 <code>apple</code> 的向量会离得很远。</li>
+<li><strong>学习从上下文到下一个词的映射</strong>：利用神经网络的强大拟合能力，来学习一个函数。这个函数的输入是前 n−1 个词的词向量，输出是词汇表中每个词在当前上下文后出现的概率分布。</li>
+</ol>
+<p>接下来为了增加记忆能力，为了打破固定窗口的限制，<strong>循环神经网络 (Recurrent Neural Network, RNN)</strong> 应运而生：</p>
+<p>![][&#x2F;img&#x2F;RNN.png]</p>
+<p><strong>长短时记忆网络 (Long Short-Term Memory, LSTM)</strong> 是一种特殊的RNN，引入了细胞状态与门控，懒癌犯了，先不细写了。</p>
+<p>接下来是重头戏 <strong>Transformer架构</strong> ，它完全抛弃了循环结构，转而完全依赖 <strong>注意力 (Attention)</strong> 的机制来捕捉序列内的依赖关系，从而实现了真正意义上的并行计算，它在宏观上遵循了一个经典的 <strong>编码器-解码器 (Encoder-Decoder)</strong> 架构。<br>![][&#x2F;img&#x2F;Transformer.png]</p>
+<p>具体怎么搭建实在是相当难写，本懒癌患者就懒得写了，而且也没学完。。。</p>
 
                 
               </div>
@@ -412,8 +423,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>hello-agent第四章</div>
-      <div>http://example.com/2026/07/14/hello-agent第四章/</div>
+      <div>hello-agents第二章与第三章</div>
+      <div>http://example.com/2026/07/17/hello-agents第二章与第三章/</div>
     </div>
     <div class="license-meta">
       
@@ -425,7 +436,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2026年7月14日</div>
+          <div>2026年7月17日</div>
         </div>
       
       
@@ -457,18 +468,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/07/17/hello-agents%E7%AC%AC%E4%BA%8C%E7%AB%A0%E4%B8%8E%E7%AC%AC%E4%B8%89%E7%AB%A0/" title="hello-agents第二章与第三章">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">hello-agents第二章与第三章</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/07/09/hello-agents%E7%AC%AC%E4%B8%80%E7%AB%A0%E4%B9%A0%E9%A2%98/" title="hello-agents第一章习题">
-                        <span class="hidden-mobile">hello-agents第一章习题</span>
+                      <a href="/2026/07/14/hello-agent%E7%AC%AC%E5%9B%9B%E7%AB%A0/" title="hello-agent第四章">
+                        <span class="hidden-mobile">hello-agent第四章</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
